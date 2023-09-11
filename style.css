@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:ital,wght@1,100&family=Roboto:ital,wght@0,100;1,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.search{
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search img{
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+     position: absolute;
+    
+}
+.search .content{
+    position: relative;
+    color: rgb(14, 241, 14);
+    z-index: 2;
+    text-align: center;
+}
+.search h1{
+    font-size: 2.65rem;
+    font-weight: 900;
+}
+.search p{
+    font-size: 1.65rem;
+    margin-top: 8px;
+    
+}
+.search .searchbox{
+    height: 55px;
+    margin: 45px 0;
+}
+input ,button ,i{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.searchbox input{
+    height: 100%;
+    width: 100%;
+    padding: 10px 15px;
+    
+   
+    font-size: 1.1rem;
+    padding-left: 55px;
+   
+}
+.searchbox i{
+position: absolute;
+left: 18px;
+top: 70%;
+font-size: 1.4rem;
+color: blueviolet;
+transform: translateY( -50%);
+}
+/*-------------------------------------------section image---------------------*/
+.gallary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.gallary .images{
+    
+    gap: 15px;
+    max-width: 95%;
+    margin-top: 25px;
+    columns: 5 340px;
+    cursor: pointer;
+}
+.images img{
+    width: 100%;
+}
+.images .card{
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+.images .card .detail{
+    position: absolute;
+    bottom:-100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+    transition: bottom 0.1 ease;
+    background: linear-gradient(to top,rgba(0,0,0,0.7) ,transparent);
+}
+.images .card:hover .detail{
+    bottom: 0;
+}
+ .photo{
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
+ .photo i{
+    font-size: 1.4rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.detail .photo span{
+    font-size: 1.04rem;
+   
+}
+.card .detail button {
+    padding: 3px 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    background: whitesmoke;
+}
+.gallary .loadmore{
+    margin: 50px 0;
+    font-size: 1.3rem;
+    color: antiquewhite;
+    padding: 12px 27px;
+    background: blue;
+    cursor: pointer;
+}
+.gallary .loadmore .disabled{
+    opacity: 0.6;
+    pointer-events: none;
+}
+/*----------------new-------*/
+.lightbox{
+    position: fixed;
+    display: none;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0,0.65));
+}
+
+    
+.lightbox .wrap{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width:100%;
+    padding: 20px;
+    max-width: 750px;
+    background: whitesmoke;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+}
+.wrap header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.previewimg {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+.wrap .previewimg .img{
+    max-height: 65vw;
+    max-width: 90vw;
+}
+.previewimg .img img{
+    width: 50%;
+    object-fit: contain;
+    height: 90%;
+    
+}
+header .photo{
+    color: #333;
+}
+header .photo i{
+    font-size: 1.7rem;
+}
+header .photo span{
+    font-size: 1.2rem;
+}
+header .buttons i{
+    width: 40px;
+    height: 40px;
+    color:#fff;
+    font-size: 1.2rem;
+    display: inline-block;
+    line-height: 40px;
+    background: blue;
+
+    text-align: center;
+}
+.buttons i:last-child{
+    margin-left: 10px;
+    background: grey;
+}
